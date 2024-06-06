@@ -14,8 +14,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/js/server.js"
+    "http": "http-server -p 5050 --cors",
+    "node": "node ./src/js/server.js",
+    "node-dev": "nodemon ./src/js/server.js",
+    "start": "start npm run http && start npm run node",
+    "start-dev": "start npm run http && start npm run node-dev"
   },
-  "author": "",
+  "author": "Jan Schönfeld",
   "license": "MIT"
 }

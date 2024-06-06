@@ -6,10 +6,10 @@ Released on TDB.
 
 ### Added
 * Third version of the project
-  - Added a React component to dynamically render the `Submit` button once all required input fields have been fulfilled.
+    - Contact form data coming from the API is now stored in a MySQL database.
 
 ### Changed
-- TBD
+    - package.json now includes combined scripts
 
 ## 0.0.2
 
@@ -55,5 +55,3 @@ Files:
     - /src/index.js
     - /src/promises.js
     - /src/server.js
-
-    
