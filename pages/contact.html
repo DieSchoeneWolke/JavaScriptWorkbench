@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>JavaScript Workbench</title>
+  </head>
+  <body>
+    <div class="topnav" id="Topnav">
+      <a href="../index.html">Home</a>
+      <a href="./arrays.html">Arrays</a>
+      <a href="./classes.html">Classes</a>
+      <a href="./control-flow.html">Control flow</a>
+      <a href="./errors.html">Errors</a>
+      <a href="./functions.html">Functions</a>
+      <a href="./promises.html">Promises</a>
+      <a class="active" <a href="./contact.html">Contact</a>
+      <a href="#" class="icon" onclick="responsiveTopnav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="myForm">
+      <form id="myForm">
+        <!-- method="post" action="/"> -->
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name..."
+          
+        />
+
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name..."
+          required
+        />
+        <label for="email">E-Mail</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Your E-Mail address..."
+          required
+        />
+
+        <label for="department">Department</label>
+        <select id="department" name="department">
+          <option value="controling">Controling</option>
+          <option value="hr">HR</option>
+          <option value="sales">Sales</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 200px"
+          required
+        ></textarea>
+
+        <div id="react-container"></div>
+      </form>
+    </div>
+    <!-- <button id="btn-1">Click to run the script</button> -->
+    <script src="../src/js/contact.js"></script>
+    <script src="../src/react/SubmitButton.jsx"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('react-container');
+        ReactDOM.render(React.createElement(AlertButton), container);
+      });
+    </script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>
