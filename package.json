@@ -5,6 +5,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "mysql2": "^3.10.0",
     "perfect-express-sanitizer": "^2.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -15,10 +16,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "http": "http-server -p 5050 --cors",
-    "node": "node ./src/js/server.js",
-    "node-dev": "nodemon ./src/js/server.js",
-    "start": "start npm run http && start npm run node",
-    "start-dev": "start npm run http && start npm run node-dev"
+    "api": "node ./src/js/server.js",
+    "api-dev": "nodemon ./src/js/server.js",
+    "start": "start npm run http && start npm run api",
+    "start-dev": "start npm run http && start npm run api-dev"
   },
   "author": "Jan Schönfeld",
   "license": "MIT"

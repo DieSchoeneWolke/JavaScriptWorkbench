@@ -55,7 +55,7 @@
 
         <label for="department">Department</label>
         <select id="department" name="department">
-          <option value="controling">Controling</option>
+          <option value="controlling">Controlling</option>
           <option value="hr">HR</option>
           <option value="sales">Sales</option>
         </select>
@@ -69,19 +69,10 @@
           required
         ></textarea>
 
-        <div id="react-container"></div>
+        <input type="submit" value="Submit" id="submit-button" />
       </form>
     </div>
     <!-- <button id="btn-1">Click to run the script</button> -->
     <script src="../src/js/contact.js"></script>
-    <script src="../src/react/SubmitButton.jsx"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const container = document.getElementById('react-container');
-        ReactDOM.render(React.createElement(AlertButton), container);
-      });
-    </script>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   </body>
 </html>

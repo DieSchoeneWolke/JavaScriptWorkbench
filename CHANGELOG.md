@@ -2,14 +2,14 @@
 
 ## 0.0.3
 
-Released on TDB.
+Released on TBD.
 
 ### Added
 * Third version of the project
     - Contact form data coming from the API is now stored in a MySQL database.
 
 ### Changed
-    - package.json now includes combined scripts
+    - package.json now includes combined scripts to start the environment easier.
 
 ## 0.0.2
 

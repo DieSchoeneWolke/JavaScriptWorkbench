@@ -23,14 +23,6 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     .catch((error) => console.error('Error:', error));
 });
 
-
-// TODO: Add a React component to dynamically popup the alert 
-/* 
-document.getElementById('submit-button').addEventListener('click', function (event) {
-  alert('Form has been submitted!');
-}); 
-*/
-
 // Website functionality starts here
 
 function responsiveTopnav() {
@@ -41,3 +33,22 @@ function responsiveTopnav() {
     x.className = "topnav";
   }
 }
+
+// TODO: Figure out how to write the formdata to different tables
+// depending on the selection the user did in the html form.
+
+/* const tableName = data.department;
+let selectedOption = document.getElementById('department').value;
+
+let finalTableName;
+switch (selectedOption) {
+  case 'controlling':
+    finalTableName = tableName;
+    break;
+  case 'hr':
+    finalTableName = 'hr';
+    break;
+  case 'sales':
+    finalTableName = 'sales';
+    break;
+} */
