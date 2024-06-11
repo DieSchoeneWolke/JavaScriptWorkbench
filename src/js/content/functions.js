@@ -1,12 +1,11 @@
 const person = {
     firstName: "John",
     lastName: "Doe",
+    message: "Refresh the page to stop the spam!",
     display: function () {
-        return this.firstName + " " + this.lastName;
+        return this.firstName + " " + this.lastName + "\n" + this.message;
     },
 }
-
-//let temp2 = person.display.bind(person);
 
 function tick() {
   alert(person.display());
@@ -26,12 +25,3 @@ function responsiveTopnav() {
       x.className = "topnav";
     }
   }
-
-  /* function Greeting() {
-    alert('Hello!');
-}
-
-const member = {
-    firstName:"Hege",
-    lastName: "Nilsen",
-  } */

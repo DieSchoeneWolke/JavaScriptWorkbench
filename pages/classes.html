@@ -16,6 +16,7 @@
       <a href="./errors.html">Errors</a>
       <a href="./functions.html">Functions</a>
       <a href="./promises.html">Promises</a>
+      <a href="./contact.html">Contact</a>
       <a href="#" class="icon" onclick="responsiveTopnav()">
         <i class="fa fa-bars"></i>
       </a>
@@ -32,45 +33,40 @@
       </p>
       <pre>
           <code>
-            class MyClass {
-              constructor() {
-                  this.numbers = [1, 10, 5, 15, 2, 7, 28, 900, 45, 18, 27];
-              }
-          }
-          
-          const myObject = new MyClass();
-          
-          function modifyArray(arr, push, seperator, trim) {
-              const reversedArray = arr.slice().reverse();
-              reversedArray.push(push);
-              reversedArray.pop();
-              const joinedString = reversedArray.join(seperator);
-              const trimmedString = joinedString.trim(trim);
-              //console.log('trimmedString:', trimmedString);
-              const copiedArray = loopArray(reversedArray);
-              return { trimmedString, copiedArray };
-          }
-          
-          function loopArray(loop) {
-              const loopedArray = loop.map(w => w * 2);
-              //console.log('loopedArray:', loopedArray);
-              return loopedArray
-          }
-          
-          function modifyAndLoopArray(arr, push, seperator, trim) {
-              const modifiedString = modifyArray(arr, push, seperator, trim);
-              return modifiedString;
-          }
-          
-          document.querySelector("#btn-1").addEventListener("click", function () {
-              const printNumbers = modifyAndLoopArray(myObject.numbers, 'Hello World ', '.');
-              const result = printNumbers.trimmedString + '\n' + printNumbers.copiedArray.join(', ');
-              alert(result);
-          });
+            // Constructor Blueprint starts here
+            class Construct0r {
+                constructor(firstName, lastName, age, eyeColor, nationality) {
+                    this.firstName = firstName;
+                    this.lastName = lastName;
+                    this.age = age;
+                    this.eyeColor = eyeColor;
+                    this.nationality = nationality;
+                }
+            }
+            
+            // Constructor definition starts here
+            firstConstructor = new Construct0r("Max", "Meier", 33, "brown", "german");
+            
+            class Person {
+                constructor(name) {
+                    this._name = name;
+                }
+                get name() {
+                    return this._name + '!!!';
+                }
+                set name(newValue) {
+                    this._name = newValue;
+                }
+            }
+   
+            
+            const me = new Clothing('Zach', 'whateverBrand', 'red')
+            me.name = 'Jacob'
+  
           </code>
         </pre>
     </div>
     <button id="btn-1">Click to run the script</button>
-    <script src="../src/js/classes.js"></script>
+    <script src="../src/js/content/classes.js"></script>
   </body>
 </html>

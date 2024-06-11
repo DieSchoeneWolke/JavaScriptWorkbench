@@ -19,6 +19,7 @@
       <a href="./errors.html">Errors</a>
       <a href="./functions.html">Functions</a>
       <a href="./promises.html">Promises</a>
+      <a href="./contact.html">Contact</a>
       <a href="#" class="icon" onclick="responsiveTopnav()">
         <i class="fa fa-bars"></i>
       </a>
@@ -40,7 +41,7 @@
             <code>
               const time = new Date().getHours();
               let greeting;
-
+              
               try {
                 if (time < 10) {
                   greeting = "Good morning";
@@ -53,20 +54,28 @@
               catch (err) {
                 document.getElementById("demo").innerHTML = err.message;
               }
-
+              
               // Website functionality starts here
-
+              
               document.querySelector("#btn-1").addEventListener("click", function () {
                 alert(greeting);
                 if (greeting !== "Good day") {
                   document.body.style.backgroundColor = "LemonChiffon";
                 }
               });
+              
+              function responsiveTopnav() {
+                var x = document.getElementById("Topnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
               }
             </code>
           </pre>
     </div>
     <button id="btn-1">Click to run the script</button>
-    <script src="../src/js/if-else.js"></script>
+    <script src="../src/js/content/control-flow.js"></script>
   </body>
 </html>

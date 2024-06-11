@@ -4,6 +4,7 @@
   "description": "learn javascript",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mysql2": "^3.10.0",
     "perfect-express-sanitizer": "^2.0.2",
@@ -16,8 +17,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "http": "http-server -p 5050 --cors",
-    "api": "node ./src/js/server.js",
-    "api-dev": "nodemon ./src/js/server.js",
+    "api": "node ./src/js/app.js",
+    "api-dev": "nodemon ./src/js/app.js",
     "start": "start npm run http && start npm run api",
     "start-dev": "start npm run http && start npm run api-dev"
   },

@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../stylesheet.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>JavaScript Workbench</title>
   </head>
   <body>
@@ -16,6 +19,7 @@
       <a href="./errors.html">Errors</a>
       <a class="active" <a href="./functions.html">Functions</a>
       <a href="./promises.html">Promises</a>
+      <a href="./contact.html">Contact</a>
       <a href="#" class="icon" onclick="responsiveTopnav()">
         <i class="fa fa-bars"></i>
       </a>
@@ -32,17 +36,37 @@
       </p>
       <pre>
             <code>
-              function Greeting() {
-                alert('Hello!');
+              const person = {
+                firstName: "John",
+                lastName: "Doe",
+                message: "Refresh the page to stop the spam!",
+                display: function () {
+                    return this.firstName + " " + this.lastName + "\n" + this.message;
+                },
             }
+            
+            function tick() {
+              alert(person.display());
+            }
+            
+            // Website functionality starts here
+            
             document.querySelector("#btn-1").addEventListener("click", function () {
-                alert('Hello World');
-                Greeting();
+                setInterval(tick.bind(person), 300);
             });
+            
+            function responsiveTopnav() {
+                var x = document.getElementById("Topnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
             </code>
           </pre>
     </div>
     <button id="btn-1">Click to run the script</button>
-    <script src="../src/js/functions.js"></script>
+    <script src="../src/js/content/functions.js"></script>
   </body>
 </html>

@@ -12,7 +12,7 @@ const userDataValidate = (req, res, next) => {
   if (!req.body.subject) {
     errorMessage = "Subject is required!";
   }
-  
+
   // send error
   if (errorMessage) {
     return res.status(400).json({ success: false, errorMessage });

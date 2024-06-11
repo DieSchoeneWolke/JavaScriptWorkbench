@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./stylesheet.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>JavaScript Workbench</title>
   </head>
   <body>
@@ -22,15 +25,34 @@
       </a>
     </div>
     <div class="content">
-      <h1>Main Content Area</h1>
+      <h1>Welcome to the JavaScript Workbench!</h1>
       <p>
-        This is the main content area where the selected page will be displayed.
+        This website is for training JavaScript!
+        <br />
+        When you click the button below, an alert box will appear and show you
+        the result.
       </p>
+      <pre>
+            <code>
+            // Website functionality starts here
+            
+            document.querySelector("#btn-1").addEventListener("click", function () {
+                alert('Hello World');
+            });
+            
+            function responsiveTopnav() {
+                var x = document.getElementById("Topnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
+            </code>
+          </pre>
     </div>
     <nav id="navigation"></nav>
     <button id="btn-1">Click to run the script</button>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="./src/js/app.js"></script>
+    <script src="./src/js/content/home.js"></script>
   </body>
 </html>

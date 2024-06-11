@@ -19,6 +19,7 @@
       <a class="active" <a href="./errors.html">Errors</a>
       <a href="./functions.html">Functions</a>
       <a href="./promises.html">Promises</a>
+      <a href="./contact.html">Contact</a>
       <a href="#" class="icon" onclick="responsiveTopnav()">
         <i class="fa fa-bars"></i>
       </a>
@@ -27,17 +28,33 @@
       <h1>Errors</h1>
       <p>If there's an error it will be displayed here:</p>
       <b><p id="demo"></p></b>
+      <br>
       <pre>
-            <code>try {
-              consold.log("Hello");
-            }
-            catch(err) {
-              document.getElementById("demo").innerHTML = err.message;
-            }
-            </code>
+            <code>
+              try {
+                consold.log("Hello");
+              }
+              catch(err) {
+                document.getElementById("demo").innerHTML = err.message;
+              }
+              
+              // Website functionality starts here
+              
+              document.querySelector("#btn-1").addEventListener("click", function () {
+              // code here
+              });
+              
+              function responsiveTopnav() {
+                var x = document.getElementById("Topnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
           </pre>
     </div>
     <!-- <button id="btn-1">Click to run the script</button> -->
-    <script src="../src/js/errors.js"></script>
+    <script src="../src/js/content/errors.js"></script>
   </body>
 </html>

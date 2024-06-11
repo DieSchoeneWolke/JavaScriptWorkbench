@@ -19,6 +19,7 @@
       <a href="./errors.html">Errors</a>
       <a href="./functions.html">Functions</a>
       <a class="active" <a href="./promises.html">Promises</a>
+      <a href="./contact.html">Contact</a>
       <a href="#" class="icon" onclick="responsiveTopnav()">
         <i class="fa fa-bars"></i>
       </a>
@@ -61,10 +62,25 @@
                     alert(result);
                   });
               }
+              
+              // Website functionality starts here
+              
+              document.querySelector("#btn-1").addEventListener("click", function () {
+                buttonClick();
+              });
+              
+              function responsiveTopnav() {
+                var x = document.getElementById("Topnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
             </code>
           </pre>
     </div>
     <button id="btn-1">Click to run the script</button>
-    <script src="../src/js/promises.js"></script>
+    <script src="../src/js/content/promises.js"></script>
   </body>
 </html>

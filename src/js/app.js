@@ -1,26 +1,33 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
+const express = require("express");
+const cors = require('cors');
+const sanitizer = require('perfect-express-sanitizer');
+const formRouter = require("./routes/form");
+const { userDataValidate } = require('./validations/user.validation');
+const app = express();
+const port = 3000;
+app.use(cors(), express.json());
+app.use(
+  express.json(),
+  express.urlencoded({
+    extended: true,
+  }),
+  sanitizer.clean({
+    xss: true,
+    noSql: false,
+    sql: true,
+    sqlLevel: 5,
+    noSqlLevel: 5
+  }),
+);
 
-function NavigationBar() {
-  // TODO: Actually implement a navigation bar
-  return <h1>Hello from React!</h1>;
-}
-
-const domNode = document.getElementById('navigation');
-const root = createRoot(domNode);
-root.render(<NavigationBar />);
-
-// Website functionality starts here
-document.querySelector("#btn-1").addEventListener("click", function () {
-  alert('Hello World!');
+app.use("/api/send", userDataValidate, formRouter);
+app.use((err, req, res, next) => {
+  const statusCode = err.statusCode || 500;
+  console.error(err.message, err.stack);
+  res.status(statusCode).json({ message: err.message });
+  return;
 });
 
-function responsiveTopnav() {
-  var x = document.getElementById("Topnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-
+app.listen(port, () => {
+  console.log(`Form API listening on http://localhost:${port}`);
+});

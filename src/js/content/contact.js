@@ -1,7 +1,7 @@
 document.getElementById('myForm').addEventListener('submit', function (event) {
   event.preventDefault();
 
-  var formData = {
+  const formData = {
     fname: document.getElementById('fname').value,
     lname: document.getElementById('lname').value,
     email: document.getElementById('email').value,
