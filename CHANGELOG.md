@@ -1,5 +1,73 @@
 # Changelog
 
+## 0.0.7
+
+Released on June TBD, 2024.
+
+### Added
+* Fourth version of the project
+    - Security
+
+Folder:
+    - 
+
+Files:
+    - 
+
+### Changed
+    - 
+
+## 0.0.6
+
+Released on June TBD, 2024.
+
+### Added
+* Fourth version of the project
+    - Shop
+
+Folder:
+    - 
+
+Files:
+    - 
+
+### Changed
+    - 
+
+## 0.0.5
+
+Released on June TBD, 2024.
+
+### Added
+* Fourth version of the project
+    - Usermanagement system
+
+Folder:
+    - 
+
+Files:
+    - 
+
+### Changed
+    - 
+
+## 0.0.4
+
+Released on June TBD, 2024.
+
+### Added
+* Fourth version of the project
+    - Logging
+
+Folder:
+    - 
+
+Files:
+    - 
+
+### Changed
+    - 
+
 ## 0.0.3
 
 Released on June 11, 2024.
