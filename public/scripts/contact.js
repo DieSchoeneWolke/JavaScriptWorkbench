@@ -33,22 +33,3 @@ function responsiveTopnav() {
     x.className = "topnav";
   }
 }
-
-// TODO: Figure out how to write the formdata to different tables
-// depending on the selection the user did in the html form.
-
-/* const tableName = data.department;
-let selectedOption = document.getElementById('department').value;
-
-let finalTableName;
-switch (selectedOption) {
-  case 'controlling':
-    finalTableName = tableName;
-    break;
-  case 'hr':
-    finalTableName = 'hr';
-    break;
-  case 'sales':
-    finalTableName = 'sales';
-    break;
-} */

@@ -53,20 +53,38 @@ Files:
 
 ## 0.0.4
 
-Released on June TBD, 2024.
+Released on June 12, 2024.
 
 ### Added
 * Fourth version of the project
-    - Logging
+    - Implemented a logging system using log4js.
 
 Folder:
-    - 
+    - `/src/public`
+    - `/src/public/assets`
+    - `/src/logging`
+    - `/src/server`
 
 Files:
-    - 
+    - `/src/logging/log4js.json`
 
 ### Changed
-    - 
+    - Directory structure to a professional level.
+    - Double quotes to single quotes where possible for less distraction in the code. If the user must be confronted with quotes in strings, double quotes are used for more attention.
+
+Folder:
+    - `/src/js/content` is now `/public/scripts`
+    - `/pages` is now `/public/pages`
+    - `/src/js/db` is now `/src/db`
+    - `/src/js/services` is now `/src/services`
+    - `/src/js/validations` is now `/src/validations`
+    - `/src/js/routes` is now `/src/routes`
+    
+Files:
+    - `/favicon.ico` is now `/public/assets/favicon.ico`
+    - `/index.html` is now `/public/index.html`
+    - `/stylesheet.css` is now `/public/stylesheet.css`
+    - `/package.json` includes the npm module `log4js`
 
 ## 0.0.3
 
