@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../stylesheet.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <title>JavaScript Workbench</title>
   </head>
   <body>
@@ -19,7 +17,10 @@
       <a href="./errors.html">Errors</a>
       <a href="./functions.html">Functions</a>
       <a href="./promises.html">Promises</a>
-      <a class="active" <a href="./contact.html">Contact</a>
+      <a class="active" <a href="./form.html">Form</a>
+      <a href="./user/dashboard.html">User Dashboard</a>
+      <a href="./user/adduser.html">User Addition</a>
+      <a href="./user/updateuser.html">User Modification</a>
       <a href="#" class="icon" onclick="responsiveTopnav()">
         <i class="fa fa-bars"></i>
       </a>
@@ -32,7 +33,7 @@
           id="fname"
           name="firstname"
           placeholder="Your name..."
-          
+          required
         />
 
         <label for="lname">Last Name</label>
@@ -71,6 +72,6 @@
         <input type="submit" value="Submit" id="submit-button" />
       </form>
     </div>
-    <script type='module' src="../scripts/contact.js"></script>
+    <script type='module' src="../scripts/form.js"></script>
   </body>
 </html>

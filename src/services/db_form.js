@@ -1,5 +1,5 @@
 const mysql = require('mysql2/promise');
-const config = require('../db/db_connect');
+const config = require('../db/db_form.js');
 const log4js = require('log4js');
 log4js.configure('./src/logging/log4js.json');
 const log = log4js.getLogger('db');

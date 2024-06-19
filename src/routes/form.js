@@ -4,8 +4,7 @@ const form = require('../services/form');
 const log4js = require('log4js');
 log4js.configure('./src/logging/log4js.json');
 const log = log4js.getLogger('api');
-// TODO: Validate user input with log4js
-const { userDataValidate } = require('../validations/user.validation');
+const { userDataValidate } = require('../validations/uservalidation');
 
 router.use(log4js.connectLogger(log4js.getLogger('http'), { level: 'auto' }));
 

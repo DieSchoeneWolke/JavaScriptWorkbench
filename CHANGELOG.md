@@ -36,20 +36,49 @@ Files:
 
 ## 0.0.5
 
-Released on June TBD, 2024.
+Released on June 19, 2024.
+
 
 ### Added
 * Fourth version of the project
-    - Usermanagement system
+    - User management system using an HTML table and forms connected to a MySQL database including a dynamic search function with adding and updating user functionality using the `Fetch API`.
 
 Folder:
-    - 
+    - `/public/pages/user`
 
 Files:
-    - 
+    - `/public/pages/user/adduser.html`
+    - `/public/pages/user/dashboard.html`
+    - `/public/pages/user/updateuser.html`
+    - `/public/pages/scripts/adduser.js`
+    - `/public/pages/scripts/dashboard.js`
+    - `/public/pages/scripts/updateuser.js`
+    - `/src/db/db_user.js`
+    - `/src/routes/user.js`
+    - `/src/services/db_user.js`
+    - `/src/services/user.js`
+    - `/public/assets/searchicon.png`
 
 ### Changed
-    - 
+    - `/stylesheet.css` to style the table, search bar and forms
+    - `/src/validations/user.validation.js` is now `/src/validations/uservalidation.js`
+    - `/public/pages/contact.html` is now `/public/pages/form.html`
+    - `/public/scripts/contact.js` is now `/public/scripts/form.js`
+    - `/src/db/db_connect.js` is now `/src/db/db_form.js`
+    - `/src/services/form.js` imports and message bodies
+    - `package.json` from not used packages
+    - `/src/server/app.js` to include the user management system
+    - `/public/pages/promises.html` has an appropriate text now
+    - `/public/pages/functions.html` has an appropriate text now
+    - `/public/pages/control-flow.html` has an appropriate text now
+    - `/public/pages/classes` has an appropriate text now
+
+### Fixed
+    - `/public/pages/arrays.html` had no reference to `/public/assets/favicon.ico`
+    - `/public/pages/control-flow.html` had no reference to `/public/assets/favicon.ico`
+    - `/public/pages/errors.html` had no reference to `/public/assets/favicon.ico`
+    - `/public/pages/functions.html` had no reference to `/public/assets/favicon.ico`
+    - `/public/pages/promises.html` had no reference to `/public/assets/favicon.ico`
 
 ## 0.0.4
 

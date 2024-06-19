@@ -9,7 +9,7 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     subject: document.getElementById('subject').value,
   };
 
-  fetch('http://127.0.0.1:3000/api/send', {
+  fetch('http://127.0.0.1:3000/api/form', {
     method: 'POST',
     mode: 'cors',
     headers: {
@@ -19,9 +19,14 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     body: JSON.stringify(formData),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      const message = data.message;
+      alert(message);
+      document.getElementById('myForm').reset();
+    })
     .catch((error) => console.error('Error:', error));
 });
+
 
 // Website functionality starts here
 

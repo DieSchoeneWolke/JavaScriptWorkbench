@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
+    <title>JavaScript Workbench</title>
+  </head>
+  <body>
+    <div class="topnav" id="Topnav">
+      <a href="../../index.html">Home</a>
+      <a href="../arrays.html">Arrays</a>
+      <a href="../classes.html">Classes</a>
+      <a href="../control-flow.html">Control flow</a>
+      <a href="../errors.html">Errors</a>
+      <a href="../functions.html">Functions</a>
+      <a href="../promises.html">Promises</a>
+      <a href="../form.html">Form</a>
+      <a href="./dashboard.html">User Dashboard</a>
+      <a href="./adduser.html">User Addition</a>
+      <a class="active" <a href="./updateuser.html">User Modification</a>
+      <a href="#" class="icon" onclick="responsiveTopnav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>   
+<div class="updateUserForm">
+  <form id="updateUserForm">
+    <label for="userid">ID</label>
+    <input type="text" id="userid" name="userid" placeholder="User ID..." required />
+
+    <label for="fname">First Name</label>
+    <input
+      type="text"
+      id="fname"
+      name="firstname"
+      placeholder="First name..."
+      required
+    />
+
+    <label for="lname">Last Name</label>
+    <input
+      type="text"
+      id="lname"
+      name="lastname"
+      placeholder="Last name..."
+      required
+    />
+
+    <label for="department">Department</label>
+    <select id="department" name="department">
+      <option value="controlling">Controlling</option>
+      <option value="hr">HR</option>
+      <option value="sales">Sales</option>
+    </select>
+    <label for="email">E-Mail</label>
+    <input
+      type="text"
+      id="email"
+      name="email"
+      placeholder="E-Mail address..."
+      required
+    />
+    <input type="submit" value="Submit" id="submit-button" />
+  </form>
+</div>
+
+<script src="../../scripts/updateuser.js"></script>
+</body>
+</html>

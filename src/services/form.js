@@ -1,5 +1,5 @@
-const db = require('./db');
-const config = require('../db/db_connect');
+const db = require('./db_form.js');
+const config = require('../db/db_form.js');
 const helper = require('../db/helper');
 const log4js = require('log4js');
 log4js.configure('./src/logging/log4js.json');
@@ -28,7 +28,7 @@ async function create(form) {
   let message = 'Error in creating form entry';
 
   if (result.affectedRows) {
-    message = 'Form entry created successfully';
+    message = 'Form has been submitted!';
   }
 
   return { message };
@@ -45,7 +45,7 @@ async function update(id, form) {
   let message = 'Error in updating form';
 
   if (result.affectedRows) {
-    message = 'Form updated successfully';
+    message = 'Form has been updated!';
   }
 
   return { message };
@@ -59,7 +59,7 @@ async function remove(id) {
   let message = 'Error in deleting form entry';
 
   if (result.affectedRows) {
-    message = 'Form entry deleted successfully';
+    message = 'Form entry has been deleted!';
   }
 
   return { message };
