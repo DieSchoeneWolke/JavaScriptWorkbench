@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
 const sanitizer = require('perfect-express-sanitizer');
@@ -36,7 +37,7 @@ app.use('/api/form', formRouter);
 app.use('/api/user', userRouter);
 
 app.use((err, req, res, next) => {
-  log.debug('This is in the app.use form function');
+  log.debug('This is in the app.use function');
   log.error('Something went wrong:', err);
   res.status(err.status || 500);
 });

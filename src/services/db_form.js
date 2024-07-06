@@ -8,7 +8,7 @@ async function query(sql, params) {
   try {
     log.debug('This is in the query function');
     const connection = await mysql.createConnection(config.db);
-    const [results, ] = await connection.execute(sql, params);
+    const [results] = await connection.execute(sql, params);
     await connection.end();
 
     return results;

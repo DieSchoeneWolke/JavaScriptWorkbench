@@ -1,11 +1,9 @@
-/* require('dotenv').config({path:'./.env'}) */
-
 const config = {
   db: {
-    host: 'localhost',
-    user: 'root',
-    password: '***REMOVED***',
-    database: 'form',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_1,
     connectTimeout: 60000
   },
   listPerPage: 20,

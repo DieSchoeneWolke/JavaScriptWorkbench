@@ -11,9 +11,7 @@ async function query(sql, params) {
     const [results] = await connection.execute(sql, params);
     await connection.end();
 
-
     return results;
-
   } catch (error) {
     log.error('Error executing SQL query:', error);
     throw new Error('An error occurred while executing the SQL query');

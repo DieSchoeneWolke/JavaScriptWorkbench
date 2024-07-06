@@ -1,0 +1,32 @@
+networks:
+  local:
+    name: local
+    ipam:
+      driver: default
+      config:
+        - subnet: 128.0.0.0/24
+          ip_range: 128.0.0.0/26
+          gateway: 128.0.0.1
+    attachable: true
+
+services:
+  db:
+    image: mysql
+    container_name: MySQL
+    restart: unless-stopped
+    environment:
+# Create a directory called "dockerSecrets" including a file named "MySQLroot.txt" and store your root password in it!
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+    volumes:
+      - ./MySQL/:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+    networks:
+      - local
+    secrets:
+      - mysql_root_password
+
+secrets:
+  mysql_root_password:
+    file: dockerSecrets/MySQLroot.txt
